@@ -1,0 +1,17 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Boonyanuch Kaewrakrob <boonyanuch.kae@ku.th>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.0",
+    "mongoose": "^5.9.9",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Guessing Game</title>
+</head>
+
+<body style="background-color: lightblue;">
+    <h1 style="text-align: center; font-family: cooper;"> Guessing Game</h1>
+
+    <% if (stage == 0) { %>
+    <form action="/start" method="POST">
+        <center><button class="button" type="submit">Start Game</button></center>
+    </form>
+    <%} else if (stage == 1) {%>
+    <center>
+        Input 4 alphabet that have been guessed
+    </center>
+    <center>
+        <div>
+            <h1><%= answer.reverse() %></h1>
+        </div>
+    </center>
+    <center>
+        <form action="/guess" method="POST">
+            <div>
+                <button name="alphabet" type="submit" value="A">A</button>
+                <button name="alphabet" type="submit" value="B">B</button>
+                <button name="alphabet" type="submit" value="C">C</button>
+                <button name="alphabet" type="submit" value="D">D</button>
+            </div>
+        </form>
+    </center>
+    <center>
+        <h1>Fail: <%= fail %></h1>
+        <br>
+        </div>
+    </center>
+    <%} else if (stage == 3) {%>
+    <center>
+        <h1>You Win!!!</h1>
+    </center>
+    <center>
+        <h1>Answer: <%= question.reverse() %></h1>
+    </center>
+    <center>
+        <h1 style="float: rigth; font-family: 'Courier New', Courier, monospace;">Fail: <%= fail %></h1>
+    </center>
+    <form action="/home" method="POST">
+        <div>
+            <center><button type="submit">Restart</button></center>
+        </div>
+    </form>
+    <% } %>
+</body>
+
+</html>
